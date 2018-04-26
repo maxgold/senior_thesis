@@ -1,0 +1,36 @@
+!!python/object/new:pybullet_envs.agents.tools.attr_dict.AttrDict
+dictitems:
+  algorithm: !!python/name:pybullet_envs.agents.ppo.algorithm.PPOAlgorithm ''
+  discount: 0.995
+  env: KukaBulletEnv-v0
+  eval_episodes: 30
+  init_logstd: -1
+  init_mean_factor: 0.1
+  kl_cutoff_coef: 1000
+  kl_cutoff_factor: 2
+  kl_init_penalty: 1
+  kl_target: 0.01
+  learning_rate: 0.0001
+  logdir: kuka/20180312T172108-pybullet_kuka_grasping
+  max_length: 1000
+  network: !!python/name:pybullet_envs.agents.networks.feed_forward_gaussian ''
+  num_agents: 30
+  optimizer: !!python/name:tensorflow.python.training.adam.AdamOptimizer ''
+  policy_layers: !!python/tuple
+  - 200
+  - 100
+  steps: 10000000.0
+  update_epochs: 25
+  update_epochs_policy: 64
+  update_epochs_value: 64
+  update_every: 30
+  use_gpu: false
+  value_layers: !!python/tuple
+  - 200
+  - 100
+  weight_summaries:
+    all: .*
+    policy: .*/policy/.*
+    value: .*/value/.*
+state:
+  _mutable: false
